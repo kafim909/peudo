@@ -1,0 +1,54 @@
+FUNCTION checkNumberOfMails(mailList)
+	var numberOfMails = 0;
+	while (mailList)
+		numberOfMails + 1
+	return numberOfMails
+
+
+
+
+
+
+
+
+
+
+
+FUNCTION mailSorting(mailList[], timeOfDay)
+
+    var RecruitmentMails = 0
+    var SpamMails = 0
+    var SalesMails = 0
+    var ReceptionMails = 0
+
+    static var allDayrecruitmentMails
+    static var allDayspamMails
+    static var allDaysalesMails
+    static var allDayreceptionMails
+
+    var i = -1;
+
+    while (mailList[++i])
+        if ("CV" in mailList[i])
+            send(mailList[i], "recruitment@parkshark.com")
+            RecruitmentMails + 1
+            delete(mailList[i])
+            continue
+        if ("Promo" in mailList[i] || "Advertising" in mailList[i])
+            send(mailList[i], spam@parkshark.com)
+            SpamMails + 1
+            delete(mailList[i])
+            continue
+        if ("Proposal" in mailList[i])
+            send(mailList[i], sales@parkshark.com)
+            SalesMails + 1
+            delete(mailList[i])
+            continue
+        else
+            send(mailList[i], reception@parkshark.com)
+            ReceptionMails + 1
+            delete(mailList[i])
+            continue
+
+    if (timeOfDay )
+    
